@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200917051105_MigrationApiImdb.cs" />
+    <Compile Remove="Migrations\20200917051105_MigrationApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200917053127_MigrationApiImdb.cs" />
+    <Compile Remove="Migrations\20200917053127_MigrationApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200917153216_MigrationApiImdb.cs" />
+    <Compile Remove="Migrations\20200917153216_MigrationApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200917185158_MigrationApiImdb.cs" />
+    <Compile Remove="Migrations\20200917185158_MigrationApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200917185500_MigrationApiImdb.cs" />
+    <Compile Remove="Migrations\20200917185500_MigrationApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200918134250_ApiImdb.cs" />
+    <Compile Remove="Migrations\20200918134250_ApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200918135100_ApiImdb.cs" />
+    <Compile Remove="Migrations\20200918135100_ApiImdb.Designer.cs" />
+    <Compile Remove="Migrations\20200918160153_ApiImdb.cs" />
+    <Compile Remove="Migrations\20200918160153_ApiImdb.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+
+</Project>
