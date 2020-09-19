@@ -3,6 +3,7 @@
 using ApiImdb.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ApiImdb.Services
 {
@@ -16,16 +17,18 @@ namespace ApiImdb.Services
         }
 
         #region CadastrarVoto
-        public void CadastrarVoto(int idFilme, Classificacao classificacao)
+        public void CadastrarVoto(int idFilme, Classificacao classificacao, string nomeUsuario, string senhaUsuario)
         {
+            Criptografia criptografia = new Criptografia();
+            var senhaCriptografada = string.IsNullOrEmpty(senhaUsuario) ? senhaUsuario : criptografia.GerarHashMd5(senhaUsuario);
             var filme = _contexto.Filmes.FirstOrDefault(f => f.FilmeId == idFilme);
-            _contexto.Atores.ToList();
-            _contexto.Diretores.ToList();
+            var usuario = _contexto.Usuarios.FirstOrDefault(x => x.Nome == nomeUsuario && x.Senha == senhaCriptografada && x.Status == "Ativo");
             Voto voto = new Voto();
+            voto.Usuario = usuario;
             voto.Filme = filme;
             voto.Classificacao = classificacao;
 
-            if (filme != null)
+            if (filme != null && usuario != null)
             {
                 _contexto.Votos.Add(voto);
                 _contexto.SaveChanges();
@@ -41,6 +44,7 @@ namespace ApiImdb.Services
             _contexto.Filmes.ToList();
             _contexto.Atores.ToList();
             _contexto.Diretores.ToList();
+            _contexto.Usuarios.ToList();
             return votos;
         }
         #endregion
@@ -51,12 +55,12 @@ namespace ApiImdb.Services
             var votos = _contexto.Votos
                 .Where(f => f.Filme.FilmeId == idFilme).ToList();
 
-        var mediaVotos = votos.Average(x => (int)x.Classificacao);
-        _contexto.Atores.ToList();
+            var mediaVotos = votos.Average(x => (int)x.Classificacao);
+            _contexto.Atores.ToList();
             _contexto.Diretores.ToList();
 
             MediaVoto media = new MediaVoto();
-        media.Pontuacao = mediaVotos;
+            media.Pontuacao = mediaVotos;
             media.Filme = _contexto.Filmes
                 .FirstOrDefault(f => f.FilmeId == idFilme);
             return media;

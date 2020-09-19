@@ -1,8 +1,6 @@
 ﻿using ApiImdb.Models;
-using System;
-using System.Collections.Generic;
+using ApiImdb.Services;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ApiImdb.Repositorios
 {
@@ -14,11 +12,15 @@ namespace ApiImdb.Repositorios
         {
             _contexto = contexto;
         }
+        #region GetUsuario
         public Usuario Get(string usuario, string senha)
         {
             var usuarios = _contexto.Usuarios.ToList();
+            Criptografia criptografia = new Criptografia();
+            var senhaCriptografada = string.IsNullOrEmpty(senha) ? senha : criptografia.GerarHashMd5(senha);
 
-            return usuarios.Where(x => x.Nome.ToLower() == usuario.ToLower() && x.Senha == senha).FirstOrDefault();
+            return usuarios.Where(x => x.Nome.ToLower() == usuario.ToLower() && x.Senha == senhaCriptografada).FirstOrDefault();
         }
+        #endregion
     }
 }

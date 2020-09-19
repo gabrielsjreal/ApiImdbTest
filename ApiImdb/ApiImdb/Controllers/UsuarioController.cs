@@ -23,38 +23,22 @@ namespace ApiImdb.Controllers
         [Route("cadastrar")]
         public IActionResult PostCadastrar(Usuario usuario)
         {
-            if (usuario != null)
-            {
-                _contexto.Usuarios.Add(usuario);
-                _contexto.SaveChanges();
-
-                return Ok();
-            }
-            else
-            {
-                return BadRequest();
-            }
-        }
+            UsuarioService serviceUsuario = new UsuarioService(_contexto);
+            serviceUsuario.CadastrarUsuario(usuario);
+            return Ok();
+        }       
 
         [HttpPost]
         [Route("login")]
         public ActionResult<dynamic> Authenticate(string usuario, string senha)
         {
             UsuarioRepository userRepository = new UsuarioRepository(_contexto);
-            // Recupera o usuário
             var user = userRepository.Get(usuario, senha);
-
-            // Verifica se o usuário existe
             if (user == null)
-                return NotFound(new { message = "Usuário ou senha inválidos" });
-
-            // Gera o Token
+                return NotFound(new { message = "Usuário ou senha inválidos" });            
             var token = TokenService.GerarToken(user);
-
-            // Oculta a senha
             user.Senha = "";
 
-            // Retorna os dados
             return new
             {
                 user = user,
@@ -65,51 +49,23 @@ namespace ApiImdb.Controllers
         [HttpPut]
         [Route("editar")]
         [Authorize]
-        public IActionResult PutEditar(Usuario usuario)
+        public IActionResult PutEditar(string usuarioAtual, string senhaAtual, Usuario usuarioAlterado)
         {
-            if (usuario != null)
-            {
-                var user = _contexto.Usuarios.FirstOrDefault(x => x.Nome == usuario.Nome
-                                                             && x.Senha == usuario.Senha
-                                                             && x.Tipo == usuario.Tipo);
-
-                if (user != null)
-                {
-                    _contexto.Usuarios.Update(user);
-                    _contexto.SaveChanges();
-                }
-                return Ok();
-            }
-            else
-            {
-                return BadRequest();
-            }
-           
-        }
+            UsuarioService usuarioService = new UsuarioService(_contexto);
+            usuarioService.EditarUsuario(usuarioAlterado, usuarioAtual, senhaAtual);
+            return Ok();
+        }       
 
         [HttpPost]
         [Route("excluir-desativar")]
         [Authorize(Roles = "administrador")]
         public IActionResult PostExcluir(string nomeUser, bool status)
         {
-            if (string.IsNullOrEmpty(nomeUser))
-            {
-                var user = _contexto.Usuarios.FirstOrDefault(x => x.Nome == nomeUser);
-                user.Status = status ? "Ativo" : "Desativado";
-
-                if (user != null)
-                {
-                    _contexto.Usuarios.Update(user);
-                    _contexto.SaveChanges();
-                }
-                return Ok();
-            }
-            else
-            {
-                return BadRequest();
-            }
+            UsuarioService usuarioService = new UsuarioService(_contexto);
+            usuarioService.DesativacaoLogica(nomeUser, status);
+            return Ok();
         }
-
+        
         [HttpGet]
         [Route("listar-usuarios-ativos")]
         [Authorize(Roles = "administrador")]

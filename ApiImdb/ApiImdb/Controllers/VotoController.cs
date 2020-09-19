@@ -6,22 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiImdb.Controllers
 {
-    [Route("api/filme/[controller]")]
+    [Route("api/[controller]")]
     public class VotoController : ControllerBase
     {
-        private readonly VotoService _serviceVoto;
-        private readonly PaginacaoService _servicePaginacao;
+        private VotoService ServiceVoto;
+        private readonly Contexto _contexto;
 
-        public VotoController(VotoService votoService, PaginacaoService servicePaginacao)
+        public VotoController(Contexto contexto)
         {
-            _serviceVoto = votoService;
-            _servicePaginacao = servicePaginacao;
+            _contexto = contexto;
         }
 
         [HttpPost("votar")]
-        public IActionResult PostVotar(int idFilme, Classificacao classificacao)
+        public IActionResult PostVotar(string nomeUsuario, string senhaUsuario, int idFilme, Classificacao classificacao)
         {
-            _serviceVoto.CadastrarVoto(idFilme, classificacao);
+            ServiceVoto = new VotoService(_contexto);
+            ServiceVoto.CadastrarVoto(idFilme, classificacao, nomeUsuario, senhaUsuario);
             return Ok();
         }
 
@@ -29,7 +29,8 @@ namespace ApiImdb.Controllers
         [AllowAnonymous]
         public List<Voto> GetVotosDeUmFilme(int idFilme)
         {
-            List<Voto> votos = _serviceVoto.ObterVotoDeFilme(idFilme);
+            ServiceVoto = new VotoService(_contexto);
+            List<Voto> votos = ServiceVoto.ObterVotoDeFilme(idFilme);
             return votos;
         }
 
@@ -37,13 +38,15 @@ namespace ApiImdb.Controllers
         [Authorize]
         public List<Voto> GetVotosPaginacao(Paginacao paginacao)
         {
-            return _servicePaginacao.RetornarPaginacaoVoto(paginacao);
+            PaginacaoService ServicePaginacao = new PaginacaoService(_contexto);
+            return ServicePaginacao.RetornarPaginacaoVoto(paginacao);
         }
 
         [HttpGet("media-filme")]
         public MediaVoto GetMediaPorFilme(int idFilme)
         {
-            MediaVoto media = _serviceVoto.ObterMediaPontuacaoPorFilme(idFilme);
+            ServiceVoto = new VotoService(_contexto);
+            MediaVoto media = ServiceVoto.ObterMediaPontuacaoPorFilme(idFilme);
             return media;
         }
 
@@ -51,7 +54,8 @@ namespace ApiImdb.Controllers
         [Authorize]
         public List<MediaVoto> GetMediaGeralFilmes()
         {
-            return _serviceVoto.ObterMediaPontuacaoFilmes();
+            ServiceVoto = new VotoService(_contexto);
+            return ServiceVoto.ObterMediaPontuacaoFilmes();
         }
     }
 }

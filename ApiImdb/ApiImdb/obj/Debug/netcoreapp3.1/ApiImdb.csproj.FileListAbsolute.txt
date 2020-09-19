@@ -62,7 +62,13 @@ C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\
 C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\ApiImdb.Views.dll
 C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\obj\Debug\netcoreapp3.1\ApiImdb.csprojAssemblyReference.cache
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\obj\Debug\netcoreapp3.1\ApiImdb.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\obj\Debug\netcoreapp3.1\ApiImdb.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\obj\Debug\netcoreapp3.1\ApiImdb.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Gabriel Souza\Documents\iosays\ApiImdb\ApiImdb\obj\Debug\netcoreapp3.1\ApiImdb.csprojAssemblyReference.cache
