@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Yb00K0vjsgHjZiI+faREeJeacfZlWqksNgbPLh5Jt0a3CFeJqzc4a0xvdWfPQ7jn+gHYwCQLwS+eXOW8MlB/A==",
+  "dgSpecHash": "4aZK/lOlYogyuzo6g1jwj7G9Ys68OBBp6k45ZtXW22ajy2s9Susw0laqdqoHqI76hEcZzOrad+ggi6W4quIJ8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
+  "projectFilePath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel Souza\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Gabriel Souza\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

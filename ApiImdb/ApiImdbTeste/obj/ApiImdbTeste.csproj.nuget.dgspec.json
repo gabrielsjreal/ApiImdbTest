@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj": {}
+    "D:\\ApiImdmTeste\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj": {
+    "D:\\ApiImdmTeste\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj",
+        "projectUniqueName": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj",
         "projectName": "ApiImdbTeste",
-        "projectPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj",
+        "projectPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdbTeste\\ApiImdbTeste.csproj",
         "packagesPath": "C:\\Users\\Gabriel Souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdbTeste\\obj\\",
+        "outputPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdbTeste\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {
-                "projectPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj"
+              "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {
+                "projectPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj"
               }
             }
           }
@@ -42,17 +42,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.4.0, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[3.15.1, )"
-            },
-            "nunit": {
-              "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[16.7.1, )"
             }
           },
           "imports": [
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {
+    "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
+        "projectUniqueName": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
         "projectName": "ApiImdb",
-        "projectPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
+        "projectPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
         "packagesPath": "C:\\Users\\Gabriel Souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\obj\\",
+        "outputPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Souza\\AppData\\Roaming\\NuGet\\NuGet.Config",

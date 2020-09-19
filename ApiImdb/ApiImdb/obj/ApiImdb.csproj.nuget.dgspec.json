@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {}
+    "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {
+    "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
+        "projectUniqueName": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
         "projectName": "ApiImdb",
-        "projectPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
+        "projectPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\ApiImdb.csproj",
         "packagesPath": "C:\\Users\\Gabriel Souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel Souza\\Documents\\iosays\\ApiImdb\\ApiImdb\\obj\\",
+        "outputPath": "D:\\ApiImdmTeste\\ApiImdb\\ApiImdb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Souza\\AppData\\Roaming\\NuGet\\NuGet.Config",

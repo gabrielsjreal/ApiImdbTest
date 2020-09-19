@@ -1,7 +1,5 @@
 ﻿using ApiImdb.Models;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 
 namespace ApiImdb.Services

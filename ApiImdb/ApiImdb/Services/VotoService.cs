@@ -1,9 +1,7 @@
-﻿
-
-using ApiImdb.Models;
+﻿using ApiImdb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ApiImdb.Services
 {
@@ -60,7 +58,7 @@ namespace ApiImdb.Services
             _contexto.Diretores.ToList();
 
             MediaVoto media = new MediaVoto();
-            media.Pontuacao = mediaVotos;
+            media.Pontuacao = Math.Round(mediaVotos);
             media.Filme = _contexto.Filmes
                 .FirstOrDefault(f => f.FilmeId == idFilme);
             return media;
@@ -83,7 +81,7 @@ namespace ApiImdb.Services
                     .Average(x => (int)x.Classificacao);
                 media = new MediaVoto();
                 media.Filme = filme;
-                media.Pontuacao = mediaVotos;
+                media.Pontuacao = Math.Round(mediaVotos);
 
                 listaDeMedia.Add(media);
             }
